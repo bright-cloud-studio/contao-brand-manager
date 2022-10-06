@@ -1,0 +1,36 @@
+{
+    "name":"bright-cloud-studio/contao-brand-manager",
+    "description":"A way to create one theme and dynamically change its contents based on individual brands using the site structure",
+    "homepage": "http://brightcloudstudio.com/",
+    "keywords":["contao", "brand", "manager", "multi"],
+    "type":"contao-module",
+    "license":"LGPL-3.0-or-later",
+    "authors":[
+        {
+            "name":"Bright Cloud Studio",
+            "homepage":"https://brightcloudstudio.com"
+        }
+    ],
+    "require":{
+        "php": "^8.1",
+        "contao/core-bundle": "^4.13"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bcs\\": [
+                "system/modules/contao_brand_manager/library/Bcs"
+            ]
+        }
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "system/modules/contao_brand_manager": "system/modules/contao_brand_manager"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
