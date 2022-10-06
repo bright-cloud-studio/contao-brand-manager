@@ -14,7 +14,8 @@
 /* Register Classes */
 ClassLoader::addClasses(array
 (
-    'bcs\GetBrandContent' 		=> 'system/modules/contao_brand_manager/library/bcs/GetBrandContent.php',
-    'bcs\backend\brands' 		=> 'system/modules/contao_brand_manager/library/bcs/backend/brands.php',
-    'bcs\model\brand' 			=> 'system/modules/contao_brand_manager/library/bcs/model/brand.php',
+    'Bcs\GetBrandContent' 		=> 'system/modules/contao_brand_manager/library/Bcs/GetBrandContent.php',
+    'Bcs\Backend\Brands' 		=> 'system/modules/contao_brand_manager/library/Bcs/Backend/Brands.php',
+    'Bcs\Model\Brand' 			=> 'system/modules/contao_brand_manager/library/Bcs/Model/Brand.php',
+    'Bcs\Brands'		 		=> 'system/modules/contao_brand_manager/library/Bcs/Brands.php'
 ));
