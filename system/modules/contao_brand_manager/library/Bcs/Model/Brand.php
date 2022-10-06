@@ -10,7 +10,7 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
 **/
 
-namespace bcs\model;
+namespace Bcs\Model;
 
 class Brand extends \Model
 {
