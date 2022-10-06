@@ -11,10 +11,10 @@
 **/
 
  
-namespace bcs\backend;
+namespace Bcs\Backend;
 
 use Contao\DataContainer;
-use bcs\model\brand;
+use Bcs\Model\Brand;
 
 class Brands extends \Backend
 {
