@@ -22,5 +22,5 @@ $GLOBALS['TL_MODELS']['tl_brand'] = 'Bcs\Model\Brand';
 
 /* Hooks */
 if (\Config::getInstance()->isComplete()) {
-  $GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('bcs\GetBrandContent', 'onReplaceTag');
+  $GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('Bcs\GetBrandContent', 'onReplaceTag');
 }
