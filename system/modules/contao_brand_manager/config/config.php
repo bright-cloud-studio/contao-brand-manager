@@ -17,6 +17,9 @@ $GLOBALS['BE_MOD']['content']['brands'] = array(
 	'exportLocations' => array('Bcs\Backend\Brands', 'exportBrands')
 );
 
+/* Models */
+$GLOBALS['TL_MODELS']['tl_brand'] = 'Bcs\Model\Brand';
+
 /* Hooks */
 if (\Config::getInstance()->isComplete()) {
   $GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('bcs\GetBrandContent', 'onReplaceTag');
