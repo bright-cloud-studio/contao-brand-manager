@@ -10,6 +10,13 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
 **/
 
+/* Back end modules */
+$GLOBALS['BE_MOD']['content']['brands'] = array(
+	'tables' => array('tl_brand'),
+	'icon'   => 'system/modules/contao_brand_manager/assets/icons/brand.png',
+	'exportLocations' => array('Bcs\Backend\Brands', 'exportBrands')
+);
+
 /* Hooks */
 if (\Config::getInstance()->isComplete()) {
   $GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('bcs\GetBrandContent', 'onReplaceTag');
