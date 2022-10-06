@@ -89,7 +89,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 			'label'               => &$GLOBALS['TL_LANG']['tl_brand']['toggle'],
 			'icon'                => 'visible.gif',
 			'attributes'          => 'onclick="Backend.getScrollOffset();return AjaxRequest.toggleVisibility(this,%s)"',
-			'button_callback'     => array('bcs\backend\brands', 'toggleIcon')
+			'button_callback'     => array('Bcs\Backend\Brands', 'toggleIcon')
 		),
             'show' => array
             (
@@ -130,7 +130,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 			'eval'                    => array('unique'=>true, 'rgxp'=>'alias', 'doNotCopy'=>true, 'maxlength'=>128, 'tl_class'=>'w50'),
 			'save_callback' => array
 			(
-				array('bcs\backend\brands', 'generateAlias')
+				array('Bcs\Backend\Brands', 'generateAlias')
 			),
 			'sql'                     => "varchar(128) COLLATE utf8_bin NOT NULL default ''"
 
