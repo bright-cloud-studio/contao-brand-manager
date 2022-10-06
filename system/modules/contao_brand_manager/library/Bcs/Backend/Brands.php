@@ -70,18 +70,18 @@ class Brands extends \Backend
 		$this->log('A new version of record "tl_brand.id='.$intId.'" has been created'.$this->getParentEntries('tl_brand', $intId), __METHOD__, TL_GENERAL);
 	}
 	
-	public function exportLocations()
+	public function exportBrands()
 	{
-		$objLocation = Brand::findAll();
+		$objBrand = Brand::findAll();
 		$strDelimiter = ',';
 	
-		if ($objLocation) {
+		if ($objBrand) {
 			$strFilename = "brands_" .(date('Y-m-d_Hi')) ."csv";
 			$tmpFile = fopen('php://memory', 'w');
 			
 			$count = 0;
-			while($objLocation->next()) {
-				$row = $objLocation->row();
+			while($objBrand->next()) {
+				$row = $objBrand->row();
 				if ($count == 0) {
 					$arrColumns = array();
 					foreach ($row as $key => $value) {
