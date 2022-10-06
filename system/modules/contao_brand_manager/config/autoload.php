@@ -14,7 +14,7 @@
 /* Register Classes */
 ClassLoader::addClasses(array
 (
-    'bcs\GetBrandContent' 		=> 'system/modules/contao_brand_manager/library/bcs/GetBrandContent.php'
+    'bcs\GetBrandContent' 		=> 'system/modules/contao_brand_manager/library/bcs/GetBrandContent.php',
     'bcs\backend\brands' 		=> 'system/modules/contao_brand_manager/library/bcs/backend/brands.php',
     'bcs\model\brand' 			=> 'system/modules/contao_brand_manager/library/bcs/model/brand.php',
 ));
