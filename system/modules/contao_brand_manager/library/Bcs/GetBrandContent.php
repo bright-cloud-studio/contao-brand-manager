@@ -28,9 +28,12 @@ class GetBrandContent extends \System
 
 		// lets make decisions based on the beginning of the tag
 		switch($arrTag[0]) {
-			// if the tag is what we want, {{simple_inventory::id}}, then lets go
 			case 'brand':
-				return "Serving Brand content";
+                switch($arrTag[1]) {
+                    case 'name':
+                        return 'This is the brand\'s name';
+                    break;
+                }
 			break;
 		}
 
