@@ -144,6 +144,19 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 			'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
 		),
+        'logo' => array
+		(
+            'label'                     => &$GLOBALS['TL_LANG']['tl_listing']['logo'],
+            'inputType'                 => 'fileTree',
+            'default'                   => '',
+            'search'                    => true,
+            'eval'                      => [
+                                            'mandatory' => true,
+                                            'fieldType' => 'radio', 
+                                            'filesOnly' => true
+                                        ],
+            'sql'                       => ['type' => 'binary', 'length' => 16, 'notnull' => false, 'fixed' => true]
+		),
 		'published' => array
 		(
 			'exclude'                 => true,
