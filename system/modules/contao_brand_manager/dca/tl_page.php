@@ -17,10 +17,10 @@ $GLOBALS['TL_DCA']['tl_page']['palettes']['rootfallback'] = str_replace(';{publi
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['brand_select'] = array
 (
-	'sql'                   => "varchar(255) NOT NULL default ''",
 	'label'			        => &$GLOBALS['TL_LANG']['tl_page']['brand_select'],
-	'inputType'             => 'radio',
+	'inputType'             => 'select',
 	'options_callback'	    => array('Bcs\Backend\Brands', 'optionsBrands'),										
-	'eval'                  => array('multiple'=>true, 'mandatory'=>false,'tl_class'=>'w50') 
+	'eval'                  => array('includeBlankOption'=>true, 'chosen'=>true, 'mandatory'=>false, 'tl_class'=>'w50'),
+    'sql'                   => "varchar(255) NOT NULL default ''"
 );
 
