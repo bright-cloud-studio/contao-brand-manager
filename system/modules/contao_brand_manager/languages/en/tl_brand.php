@@ -14,9 +14,8 @@
 /**
  * Legends
  */
-$GLOBALS['TL_LANG']['tl_brand']['location_legend'] 	= 'Rep Name Fields';
-$GLOBALS['TL_LANG']['tl_brand']['address_legend'] 	= 'Red Address Fields';
-$GLOBALS['TL_LANG']['tl_brand']['website_legend'] 	= 'Rep Website Details';
+$GLOBALS['TL_LANG']['tl_brand']['brand_legend'] 	= 'Brand Values';
+$GLOBALS['TL_LANG']['tl_brand']['header_legend'] 	= 'Header Values';
 $GLOBALS['TL_LANG']['tl_brand']['publish_legend'] 	= 'Publish';
 
 /* System Fields */
