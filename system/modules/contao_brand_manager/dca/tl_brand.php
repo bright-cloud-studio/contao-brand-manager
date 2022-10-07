@@ -103,7 +103,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{brand_legend},name,alias;{publish_legend},published;'
+        'default'                     => '{brand_legend},name,logo,color_primary,color_secondary,alias;{header_legend},navigation_module;{publish_legend},published;'
     ),
  
     // Fields
@@ -135,6 +135,11 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 			'sql'                     => "varchar(128) COLLATE utf8_bin NOT NULL default ''"
 
 		),
+        
+
+        
+        
+        
 		'name' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_brand']['name'],
@@ -146,7 +151,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 		),
         'logo' => array
 		(
-            'label'                     => &$GLOBALS['TL_LANG']['tl_listing']['logo'],
+            'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['logo'],
             'inputType'                 => 'fileTree',
             'default'                   => '',
             'search'                    => true,
@@ -157,6 +162,43 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
                                         ],
             'sql'                       => ['type' => 'binary', 'length' => 16, 'notnull' => false, 'fixed' => true]
 		),
+        'color_primary' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_brand']['color_primary'],
+			'inputType'               => 'text',
+			'default'		  => '',
+			'search'                  => true,
+			'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
+			'sql'                     => "varchar(255) NOT NULL default ''"
+		),
+        'color_secondary' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_brand']['color_secondary'],
+			'inputType'               => 'text',
+			'default'		  => '',
+			'search'                  => true,
+			'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
+			'sql'                     => "varchar(255) NOT NULL default ''"
+		),
+        
+        
+        
+        
+        
+        'navigation_module' => array
+		(
+            'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['navigation_module'],
+			'inputType'                 => 'select',
+			'default'                   => '',
+			'options_callback'          => array('Bcs\Backend\Brands', 'optionsNavigationModules'),
+			'eval'                      => array('includeBlankOption'=>false, 'chosen'=>true, 'tl_class'=>'w50'),
+			'sql'                       => "varchar(255) NOT NULL default ''"
+		),
+        
+        
+        
+        
+        
 		'published' => array
 		(
 			'exclude'                 => true,
