@@ -14,6 +14,8 @@
 
 $GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace(';{publish_legend}', ';{page_tag_navigation_legend},page_tag_navigation_target,page_tag_navigation_anchor_target;{publish_legend}', $GLOBALS['TL_DCA']['tl_page']['palettes']['root']);
 
+$GLOBALS['TL_DCA']['tl_page']['palettes']['rootfallback'] = str_replace(';{publish_legend}', ';{page_tag_navigation_legend},page_tag_navigation_target,page_tag_navigation_anchor_target;{publish_legend}', $GLOBALS['TL_DCA']['tl_page']['palettes']['rootfallback']);
+
 $GLOBALS['TL_DCA']['tl_page']['fields']['page_tag_navigation_anchor_target'] = array
 (
 	'label'			        => &$GLOBALS['TL_LANG']['tl_page']['page_tag_navigation_anchor_target'],
