@@ -18,6 +18,8 @@ class GetBrandContent extends \System
 {
 	public function onReplaceTag (string $insertTag)
 	{
+	    $buffer = '';
+	    
 		// if this tag doesnt contain :: it doesn't have an id, so we can stop right here
 		if (stristr($insertTag, "::") === FALSE) {
 			return 'Your tag has no ID. Please add a User ID or remove this tag from the page.';
@@ -29,14 +31,49 @@ class GetBrandContent extends \System
 		// lets make decisions based on the beginning of the tag
 		switch($arrTag[0]) {
 			case 'brand':
-                switch($arrTag[1]) {
-                    case 'name':
-                        return 'This is the brand\'s name';
-                    break;
+			    
+			    // Get Brand from db
+			    $brand = \Database::getInstance()->prepare("SELECT * FROM tl_brand WHERE id = '1'")->execute(); 
+                if ($brand->numRows > 0)
+				{
+				    while($brand->next()) {
+                        
+                        
+                        
+                        
+                        
+                        
+                        switch($arrTag[1]) {
+                            
+                            // return the Brand's Name
+                            case 'name':
+                                return $brand->name;
+                            break;
+                            
+                            // return the Brand's logo
+                            case 'logo':
+                                
+                                $logo = \FilesModel::findByUuid($brand->logo);
+                                return $logo->path;
+                            break;
+                            
+                            // return the Brand's Navigation Module
+                            case 'navigation_module':
+                                return 'NAVIGATION_MODULE';
+                            break;
+                        }
+                        
+                        
+                        
+                        
+                        
+                    }
                 }
+
 			break;
 		}
 
+        return $buffer;
 		// something has gone horribly wrong, let the user know and hope for brighter lights ahead
 		return 'Your tag is improperly formatted. Please try again.';
 	}
