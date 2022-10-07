@@ -25,6 +25,11 @@ $GLOBALS['TL_LANG']['tl_brand']['published'] 		        = array('Published', 'Sho
 
 /* Lamvin Unique Fields */
 $GLOBALS['TL_LANG']['tl_brand']['name'] 			          = array('Brand Name', 'Enter the brand\'s name');
+$GLOBALS['TL_LANG']['tl_brand']['logo'] 			          = array('Logo', 'Select the brand\'s logo');
+$GLOBALS['TL_LANG']['tl_brand']['color_primary'] 			          = array('Primary Color', 'Enter the brand\'s primary color value');
+$GLOBALS['TL_LANG']['tl_brand']['color_secondary'] 			          = array('Secondary Color', 'Enter the brand\'s secondary color value');
+
+$GLOBALS['TL_LANG']['tl_brand']['navigation_module'] 		    = array('Navigation Module', 'Select this brand\'s Navigation Module');
 
  /* Buttons */
 $GLOBALS['TL_LANG']['tl_brand']['new']   		 	= array('New record', 'Add a new record');
