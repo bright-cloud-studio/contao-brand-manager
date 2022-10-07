@@ -144,11 +144,14 @@ class Brands extends \Backend
 	}
     
     public function optionsBrands() {
-		return array(
-				'1'     => 'Brand 1',
-				'2'     => 'Brand 2',
-                '3'     => 'Brand 3');
-	}
-    
-    
+        $brands = array();
+        $this->import('Database');
+		$result = $this->Database->prepare("SELECT * FROM tl_brand WHERE published=1")->execute();
+		while($result->next())
+		{
+			$brands = $brands + array($result->id => $result->name);
+		}
+        
+		return $brands;
+    }
 }
