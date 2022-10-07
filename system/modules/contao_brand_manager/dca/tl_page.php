@@ -16,7 +16,7 @@ $GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace(';{publish_legen
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['brand'] = array
 (
-    'label'                     => &$GLOBALS['TL_LANG']['tl_page']['brand'],
+    'label'                     => &$GLOBALS['TL_LANG']['tl_page']['brand_select'],
     'inputType'                 => 'select',
     'default'                   => '',
     'options_callback'          => array('Bcs\Backend\Brands', 'optionsBrands'),
