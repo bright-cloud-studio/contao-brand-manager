@@ -12,11 +12,11 @@
 
  /* Extend the tl_page palette */
 
-$GLOBALS['TL_DCA']['tl_page']['palettes']['regular'] = str_replace(';{publish_legend}', ';{page_tag_navigation_legend},page_tag_navigation_target,page_tag_navigation_anchor_target;{publish_legend}', $GLOBALS['TL_DCA']['tl_page']['palettes']['regular']);
+$GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace(';{publish_legend}', ';{brands_legend},brand;{publish_legend}', $GLOBALS['TL_DCA']['tl_page']['palettes']['root']);
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['brand'] = array
 (
-    'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['navigation_module'],
+    'label'                     => &$GLOBALS['TL_LANG']['tl_page']['brand'],
     'inputType'                 => 'select',
     'default'                   => '',
     'options_callback'          => array('Bcs\Backend\Brands', 'optionsBrands'),
