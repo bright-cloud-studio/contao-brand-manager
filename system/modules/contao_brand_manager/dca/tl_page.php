@@ -16,19 +16,11 @@ $GLOBALS['TL_DCA']['tl_page']['palettes']['regular'] = str_replace(';{publish_le
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['brand'] = array
 (
-  'sql'                   => "varchar(255) NOT NULL default ''",
-  'label'			        => &$GLOBALS['TL_LANG']['tl_page']['page_tag_navigation_target'],
-  'inputType'             => 'radio',
-  'options_callback'	    => array('Bcs\Backend\ChildCategoryBackend', 'getChildCategories'),										
-  'eval'                  => array('multiple'=>true, 'mandatory'=>false,'tl_class'=>'w50') 
+    'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['navigation_module'],
+    'inputType'                 => 'select',
+    'default'                   => '',
+    'options_callback'          => array('Bcs\Backend\Brands', 'optionsBrands'),
+    'eval'                      => array('includeBlankOption'=>false, 'chosen'=>true, 'tl_class'=>'w50'),
+    'sql'                       => "varchar(255) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_page']['fields']['page_tag_navigation_anchor_target'] = array
-(
-	'label'			        => &$GLOBALS['TL_LANG']['tl_page']['page_tag_navigation_anchor_target'],
-	'inputType'             => 'text',
-    'default'               => '',
-    'search'                => true,
-    'eval'                  => array('mandatory'=>false, 'tl_class'=>'w50'),
-    'sql'                   => "varchar(255) NOT NULL default ''"
-);
