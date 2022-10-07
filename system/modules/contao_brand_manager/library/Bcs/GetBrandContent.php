@@ -18,6 +18,16 @@ class GetBrandContent extends \System
 {
 	public function onReplaceTag (string $insertTag)
 	{
+	    global $objPage;
+	    $selectedBrand = 0;
+	    $rp = \Database::getInstance()->prepare("SELECT * FROM tl_page WHERE id = '".$objPage->rootId."'")->execute(); 
+        if ($rp->numRows > 0)
+		{
+		    while($rp->next()) {
+		        $selectedBrand = $rp->brand_select;
+		    }
+		}
+	    
 	    $buffer = '';
 	    
 		// if this tag doesnt contain :: it doesn't have an id, so we can stop right here
@@ -33,7 +43,7 @@ class GetBrandContent extends \System
 			case 'brand':
 			    
 			    // Get Brand from db
-			    $brand = \Database::getInstance()->prepare("SELECT * FROM tl_brand WHERE id = '1'")->execute(); 
+			    $brand = \Database::getInstance()->prepare("SELECT * FROM tl_brand WHERE id = '".$selectedBrand."'")->execute(); 
                 if ($brand->numRows > 0)
 				{
 				    while($brand->next()) {
