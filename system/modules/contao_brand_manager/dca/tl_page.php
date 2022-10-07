@@ -20,7 +20,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['brand_select'] = array
 	'sql'                   => "varchar(255) NOT NULL default ''",
 	'label'			        => &$GLOBALS['TL_LANG']['tl_page']['brand_select'],
 	'inputType'             => 'radio',
-	'options_callback'	    => array('Bcs\Backend\Brands', 'optionBrands'),										
+	'options_callback'	    => array('Bcs\Backend\Brands', 'optionsBrands'),										
 	'eval'                  => array('multiple'=>true, 'mandatory'=>false,'tl_class'=>'w50') 
 );
 
