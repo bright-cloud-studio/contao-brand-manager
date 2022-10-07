@@ -143,5 +143,12 @@ class Brands extends \Backend
                 '3'     => 'Nav Module 3');
 	}
     
+    public function optionsBrands() {
+		return array(
+				'1'     => 'Brand 1',
+				'2'     => 'Brand 2',
+                '3'     => 'Brand 3');
+	}
+    
     
 }
