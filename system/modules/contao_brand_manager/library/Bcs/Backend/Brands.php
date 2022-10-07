@@ -131,4 +131,17 @@ class Brands extends \Backend
 
 		return $varValue;
 	}
+    
+    
+    
+    
+    
+    public function optionsNavigationModules() {
+		return array(
+				'1'     => 'Nav Module 1',
+				'2'     => 'Nav Module 2',
+                '3'     => 'Nav Module 3');
+	}
+    
+    
 }
