@@ -10,8 +10,13 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
 **/
 
+
+
 /* Back end modules */
-$GLOBALS['BE_MOD']['content']['brands'] = array(
+
+$GLOBALS['TL_LANG']['MOD']['contao-brand-manager'][0] = "Brand Manager";
+
+$GLOBALS['BE_MOD']['contao-brand-manager']['brands'] = array(
 	'tables' => array('tl_brand'),
 	'icon'   => 'system/modules/contao_brand_manager/assets/icons/brand.png',
 	'exportLocations' => array('Bcs\Backend\Brands', 'exportBrands')
