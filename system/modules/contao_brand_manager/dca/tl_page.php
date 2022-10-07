@@ -12,7 +12,7 @@
 
  /* Extend the tl_page palette */
 
-$GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace(';{publish_legend}', ';{brands_legend},brand;{publish_legend}', $GLOBALS['TL_DCA']['tl_page']['palettes']['root']);
+$GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace(';{publish_legend}', ';{brand_select_legend},brand_select;{publish_legend}', $GLOBALS['TL_DCA']['tl_page']['palettes']['root']);
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['brand'] = array
 (
