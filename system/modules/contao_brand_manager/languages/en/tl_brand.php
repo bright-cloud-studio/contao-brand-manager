@@ -25,7 +25,7 @@ $GLOBALS['TL_LANG']['tl_brand']['published'] 		        = array('Published', 'Sho
 /* Lamvin Unique Fields */
 $GLOBALS['TL_LANG']['tl_brand']['name'] 			          = array('Brand Name', 'Enter the brand\'s name');
 $GLOBALS['TL_LANG']['tl_brand']['logo'] 			          = array('Logo', 'Select the brand\'s logo');
-$GLOBALS['TL_LANG']['tl_brand']['css'] 			              = array('SCSS', 'Select the brand\'s SCSS override file');
+$GLOBALS['TL_LANG']['tl_brand']['scss'] 			              = array('SCSS', 'Select the brand\'s SCSS override file');
 
 $GLOBALS['TL_LANG']['tl_brand']['navigation_module'] 		    = array('Navigation Module', 'Select this brand\'s Navigation Module');
 
