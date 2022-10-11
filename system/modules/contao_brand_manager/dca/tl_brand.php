@@ -162,24 +162,21 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
                                         ],
             'sql'                       => ['type' => 'binary', 'length' => 16, 'notnull' => false, 'fixed' => true]
 		),
-        'color_primary' => array
+        'css' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_brand']['color_primary'],
-			'inputType'               => 'text',
-			'default'		  => '',
-			'search'                  => true,
-			'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
-			'sql'                     => "varchar(255) NOT NULL default ''"
+            'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['css'],
+            'inputType'                 => 'fileTree',
+            'default'                   => '',
+            'search'                    => true,
+            'eval'                      => [
+                                            'mandatory' => true,
+                                            'fieldType' => 'radio', 
+                                            'filesOnly' => true,
+                                            'extensions' => 'scss'
+                                        ],
+            'sql'                       => ['type' => 'binary', 'length' => 16, 'notnull' => false, 'fixed' => true]
 		),
-        'color_secondary' => array
-		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_brand']['color_secondary'],
-			'inputType'               => 'text',
-			'default'		  => '',
-			'search'                  => true,
-			'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
-			'sql'                     => "varchar(255) NOT NULL default ''"
-		),
+
         
         
         
