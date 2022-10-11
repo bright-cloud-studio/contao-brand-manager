@@ -137,10 +137,15 @@ class Brands extends \Backend
     
     
     public function optionsNavigationModules() {
-		return array(
-				'1'     => 'Nav Module 1',
-				'2'     => 'Nav Module 2',
-                '3'     => 'Nav Module 3');
+		$navs = array();
+        $this->import('Database');
+		$result = $this->Database->prepare("SELECT * FROM tl_module WHERE type='navigation' or type='mmenu'")->execute();
+		while($result->next())
+		{
+			$navs = $navs + array($result->id => $result->name);
+		}
+        
+		return $navs;
 	}
     
     public function optionsBrands() {
