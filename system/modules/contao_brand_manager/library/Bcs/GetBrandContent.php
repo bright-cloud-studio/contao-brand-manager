@@ -55,6 +55,14 @@ class GetBrandContent extends \System
                         
                         switch($arrTag[1]) {
                             
+                            // return the Brand's generated scss
+                            case 'scss':
+                                
+                                $scss = '<style>$prime: red;</style>';
+                                
+                                return $scss;
+                            break;
+                            
                             // return the Brand's Name
                             case 'name':
                                 return $brand->name;
@@ -86,11 +94,5 @@ class GetBrandContent extends \System
 		// something has gone horribly wrong, let the user know and hope for brighter lights ahead
 		return 'Your tag is improperly formatted. Please try again.';
 	}
-    
-    public function generateBrandSCSS (&$objBuffer, $objTemplate) {
-        
-        echo $objBuffer;
-        die();
 
-    }
 }
