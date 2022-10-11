@@ -103,7 +103,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{brand_legend},name,logo,color_primary,color_secondary,alias;{header_legend},navigation_module;{publish_legend},published;'
+        'default'                     => '{brand_legend},name,logo,color_primary,color_secondary,scss;{header_legend},navigation_module;{publish_legend},published;'
     ),
  
     // Fields
