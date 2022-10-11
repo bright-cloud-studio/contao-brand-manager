@@ -162,7 +162,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
                                         ],
             'sql'                       => ['type' => 'binary', 'length' => 16, 'notnull' => false, 'fixed' => true]
 		),
-        'css' => array
+        'scss' => array
 		(
             'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['css'],
             'inputType'                 => 'fileTree',
