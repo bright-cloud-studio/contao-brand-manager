@@ -87,9 +87,9 @@ class GetBrandContent extends \System
 		return 'Your tag is improperly formatted. Please try again.';
 	}
     
-    public function generateBrandSCSS (PageModel $pageModel, LayoutModel $layout, PageRegular $pageRegular) {
+    public function generateBrandSCSS (&$objBuffer, $objTemplate) {
         
-        print_r($pageRegular);
+        echo $objBuffer;
         die();
 
     }
