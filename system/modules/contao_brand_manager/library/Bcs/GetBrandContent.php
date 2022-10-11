@@ -62,14 +62,13 @@ class GetBrandContent extends \System
                             
                             // return the Brand's logo
                             case 'logo':
-                                
                                 $logo = \FilesModel::findByUuid($brand->logo);
                                 return $logo->path;
                             break;
                             
                             // return the Brand's Navigation Module
                             case 'navigation_module':
-                                return 'NAVIGATION_MODULE';
+                				return '{{insert_module::' . $brand->navigation_module . '}}';
                             break;
                         }
                         
