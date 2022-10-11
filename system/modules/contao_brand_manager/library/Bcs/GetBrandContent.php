@@ -58,9 +58,8 @@ class GetBrandContent extends \System
                             // return the Brand's generated scss
                             case 'scss':
                                 
-                                $scss = '<style>$prime: red;</style>';
-                                
-                                return $scss;
+                                $scss = \FilesModel::findByUuid($brand->scss);
+                                return $scss->path;
                             break;
                             
                             // return the Brand's Name
