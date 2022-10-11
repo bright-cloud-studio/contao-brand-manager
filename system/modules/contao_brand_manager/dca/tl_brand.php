@@ -164,7 +164,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 		),
         'scss' => array
 		(
-            'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['css'],
+            'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['scss'],
             'inputType'                 => 'fileTree',
             'default'                   => '',
             'search'                    => true,
