@@ -28,6 +28,7 @@ $GLOBALS['TL_LANG']['tl_brand']['logo'] 			          = array('Logo', 'Select the
 $GLOBALS['TL_LANG']['tl_brand']['scss'] 			              = array('SCSS', 'Select the brand\'s SCSS override file');
 
 $GLOBALS['TL_LANG']['tl_brand']['navigation_module'] 		    = array('Navigation Module', 'Select this brand\'s Navigation Module');
+$GLOBALS['TL_LANG']['tl_brand']['mobile_navigation_module'] 		    = array('Mobile Navigation Module', 'Select this brand\'s Mobile Navigation Module');
 
  /* Buttons */
 $GLOBALS['TL_LANG']['tl_brand']['new']   		 	= array('New record', 'Add a new record');
