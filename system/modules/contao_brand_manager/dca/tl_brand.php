@@ -198,7 +198,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
             'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['mobile_navigation_module'],
 			'inputType'                 => 'select',
 			'default'                   => '',
-			'options_callback'          => array('Bcs\Backend\Brands', 'optionsNavigationModules'),
+			'options_callback'          => array('Bcs\Backend\Brands', 'optionsMobileNavigationModules'),
 			'eval'                      => array('includeBlankOption'=>false, 'chosen'=>true, 'tl_class'=>'w50'),
 			'sql'                       => "varchar(255) NOT NULL default ''"
 		),      
