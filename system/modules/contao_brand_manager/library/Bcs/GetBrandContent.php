@@ -77,6 +77,11 @@ class GetBrandContent extends \System
                             case 'navigation_module':
                 				return '{{insert_module::' . $brand->navigation_module . '}}';
                             break;
+                            
+                            // return the Brand's Navigation Module
+                            case 'mobile_navigation_module':
+                				return '{{insert_module::' . $brand->mobile_navigation_module . '}}';
+                            break;
                         }
                         
                         
