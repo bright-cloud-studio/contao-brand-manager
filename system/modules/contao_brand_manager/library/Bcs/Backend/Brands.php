@@ -150,7 +150,7 @@ class Brands extends \Backend
     public function optionsMobileNavigationModules() {
 		$navs = array();
         $this->import('Database');
-		$result = $this->Database->prepare("SELECT * FROM tl_module WHERE type='navigation' or type='customnav' or type='mmenu' or type='mmenuHtml' or type='html'")->execute();
+		$result = $this->Database->prepare("SELECT * FROM tl_module WHERE type='mmenu' or type='mmenuHtml' or type='html'")->execute();
 		while($result->next())
 		{
 			$navs = $navs + array($result->id => $result->name);
