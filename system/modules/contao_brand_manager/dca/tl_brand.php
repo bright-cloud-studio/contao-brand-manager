@@ -103,7 +103,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{brand_legend},name,logo,color_primary,color_secondary,scss;{header_legend},navigation_module;{publish_legend},published;'
+        'default'                     => '{brand_legend},name,logo,color_primary,color_secondary,scss;{header_legend},navigation_module,mobile_navigation_module;{publish_legend},published;'
     ),
  
     // Fields
@@ -192,6 +192,16 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 			'sql'                       => "varchar(255) NOT NULL default ''"
 		),
         
+        
+          'mobile_navigation_module' => array
+		(
+            'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['mobile_navigation_module'],
+			'inputType'                 => 'select',
+			'default'                   => '',
+			'options_callback'          => array('Bcs\Backend\Brands', 'optionsNavigationModules'),
+			'eval'                      => array('includeBlankOption'=>false, 'chosen'=>true, 'tl_class'=>'w50'),
+			'sql'                       => "varchar(255) NOT NULL default ''"
+		),      
         
         
         
