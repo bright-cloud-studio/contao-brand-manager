@@ -3,7 +3,11 @@
 Current FE hooks:
 
 {{brand::scss}}
+
 {{brand::name}}
+
 {{brand::logo}}
+
 {{brand::navigation_module}}
+
 {{brand::mobile_navigation_module}}
