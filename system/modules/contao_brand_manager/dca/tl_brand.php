@@ -172,7 +172,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
                                             'mandatory' => true,
                                             'fieldType' => 'radio', 
                                             'filesOnly' => true,
-                                            'extensions' => 'scss'
+                                            'extensions' => 'scss,css'
                                         ],
             'sql'                       => ['type' => 'binary', 'length' => 16, 'notnull' => false, 'fixed' => true]
 		),
