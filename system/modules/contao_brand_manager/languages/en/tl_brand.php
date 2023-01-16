@@ -29,7 +29,7 @@ $GLOBALS['TL_LANG']['tl_brand']['scss'] 			              = array('SCSS', 'Select
 
 $GLOBALS['TL_LANG']['tl_brand']['navigation_module'] 		    = array('Navigation Module', 'Select this brand\'s Navigation Module');
 $GLOBALS['TL_LANG']['tl_brand']['mobile_navigation_module'] 		    = array('Mobile Navigation Module', 'Select this brand\'s Mobile Navigation Module');
-
+$GLOBALS['TL_LANG']['tl_brand']['search_text']                       = array('Search Text', 'Enter the brand\'s default search text that will show on the home page search');
  /* Buttons */
 $GLOBALS['TL_LANG']['tl_brand']['new']   		 	= array('New record', 'Add a new record');
 $GLOBALS['TL_LANG']['tl_brand']['show']  		 	= array('Record details', 'Show the details of record ID %s');

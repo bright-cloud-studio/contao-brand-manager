@@ -103,7 +103,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{brand_legend},name,logo,color_primary,color_secondary,scss;{header_legend},navigation_module,mobile_navigation_module;{publish_legend},published;'
+        'default'                     => '{brand_legend},name,logo,color_primary,color_secondary,scss;{header_legend},navigation_module,mobile_navigation_module;{publish_legend},search_text,published;'
     ),
  
     // Fields
@@ -146,7 +146,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 			'inputType'               => 'text',
 			'default'		  => '',
 			'search'                  => true,
-			'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
+			'eval'                    => array('mandatory'=>true, 'tl_class'=>'w100'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
 		),
         'logo' => array
@@ -157,6 +157,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
             'search'                    => true,
             'eval'                      => [
                                             'mandatory' => true,
+                                            'tl_class'=>'w100',
                                             'fieldType' => 'radio', 
                                             'filesOnly' => true
                                         ],
@@ -170,6 +171,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
             'search'                    => true,
             'eval'                      => [
                                             'mandatory' => true,
+                                            'tl_class'=>'w100',
                                             'fieldType' => 'radio', 
                                             'filesOnly' => true,
                                             'extensions' => 'scss,css'
@@ -203,7 +205,15 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 			'sql'                       => "varchar(255) NOT NULL default ''"
 		),      
         
-        
+        'search_text' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_brand']['search_text'],
+            'inputType'               => 'text',
+            'default'         => '',
+            'search'                  => true,
+            'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(255) NOT NULL default ''"
+        ),        
         
         
 		'published' => array
