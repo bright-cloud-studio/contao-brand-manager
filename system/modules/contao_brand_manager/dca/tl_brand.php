@@ -103,7 +103,7 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{brand_legend},name,logo,color_primary,color_secondary,scss;{header_legend},navigation_module,mobile_navigation_module;{publish_legend},search_text,published;'
+        'default'                     => '{brand_legend},name,logo,color_primary,color_secondary,scss,search_text;{header_legend},navigation_module,mobile_navigation_module,header_social_module;{publish_legend},published;'
     ),
  
     // Fields
@@ -178,11 +178,6 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
                                         ],
             'sql'                       => ['type' => 'binary', 'length' => 16, 'notnull' => false, 'fixed' => true]
 		),
-
-        
-        
-        
-        
         
         'navigation_module' => array
 		(

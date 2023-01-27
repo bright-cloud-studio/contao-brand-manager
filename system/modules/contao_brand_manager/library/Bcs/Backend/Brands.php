@@ -159,15 +159,15 @@ class Brands extends \Backend
 		return $navs;
 	}  
     public function optionsHeaderSocialModules() {
-		$navs = array();
+		$socials = array();
         $this->import('Database');
 		$result = $this->Database->prepare("SELECT * FROM tl_module WHERE type='html'")->execute();
 		while($result->next())
 		{
-			$navs = $navs + array($result->id => $result->name);
+			$socials = $socials + array($result->id => $result->name);
 		}
         
-		return $navs;
+		return $socials;
 	}   
     public function optionsBrands() {
         $brands = array();

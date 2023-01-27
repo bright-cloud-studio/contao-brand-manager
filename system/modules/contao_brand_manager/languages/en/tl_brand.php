@@ -30,7 +30,6 @@ $GLOBALS['TL_LANG']['tl_brand']['scss'] 			              = array('SCSS or CSS', 
 $GLOBALS['TL_LANG']['tl_brand']['navigation_module'] 		    = array('Navigation Module', 'Select this brand\'s Navigation Module');
 $GLOBALS['TL_LANG']['tl_brand']['mobile_navigation_module'] 		    = array('Mobile Navigation Module', 'Select this brand\'s Mobile Navigation Module');
 $GLOBALS['TL_LANG']['tl_brand']['header_social_module']             = array('Header Social Icon Module', 'Select this brand\'s Header Social Icon Module');
-
 $GLOBALS['TL_LANG']['tl_brand']['search_text']                       = array('Search Text', 'Enter the brand\'s default search text that will show on the home page search');
  /* Buttons */
 $GLOBALS['TL_LANG']['tl_brand']['new']   		 	= array('New record', 'Add a new record');
