@@ -83,10 +83,16 @@ class GetBrandContent extends \System
                 				return '{{insert_module::' . $brand->mobile_navigation_module . '}}';
                             break;
 
+                            // return the Brand's Header Social Icon Module
+                            case 'header_social_module':
+                				return '{{insert_module::' . $brand->header_social_module . '}}';
+                            break;
+
                             // return the Brand's Search Texr
                             case 'search_text':
                                 return $brand->search_text;
                             break;
+
                         }
                         
                         

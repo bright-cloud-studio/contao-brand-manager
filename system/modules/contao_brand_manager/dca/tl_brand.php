@@ -194,7 +194,6 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 			'sql'                       => "varchar(255) NOT NULL default ''"
 		),
         
-        
           'mobile_navigation_module' => array
 		(
             'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['mobile_navigation_module'],
@@ -203,7 +202,17 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 			'options_callback'          => array('Bcs\Backend\Brands', 'optionsMobileNavigationModules'),
 			'eval'                      => array('includeBlankOption'=>false, 'chosen'=>true, 'tl_class'=>'w50'),
 			'sql'                       => "varchar(255) NOT NULL default ''"
-		),      
+		), 
+
+          'header_social_module' => array
+        (
+            'label'                     => &$GLOBALS['TL_LANG']['tl_brand']['header_social_module'],
+            'inputType'                 => 'select',
+            'default'                   => '',
+            'options_callback'          => array('Bcs\Backend\Brands', 'optionsHeaderSocialModules'),
+            'eval'                      => array('includeBlankOption'=>false, 'chosen'=>true, 'tl_class'=>'w50'),
+            'sql'                       => "varchar(255) NOT NULL default ''"
+        ),    
         
         'search_text' => array
         (
