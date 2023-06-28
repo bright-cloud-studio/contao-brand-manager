@@ -28,8 +28,6 @@ class GetBrandContent extends \System
 		    }
 		}
 	    
-	    $buffer = '';
-	    
 		// if this tag doesnt contain :: it doesn't have an id, so we can stop right here
 		if (stristr($insertTag, "::") === FALSE) {
 			return 'Your tag has no ID. Please add a User ID or remove this tag from the page.';
@@ -105,9 +103,8 @@ class GetBrandContent extends \System
 			break;
 		}
 
-        return $buffer;
-		// something has gone horribly wrong, let the user know and hope for brighter lights ahead
-		return 'Your tag is improperly formatted. Please try again.';
+        return false;
+        
 	}
 
 }
