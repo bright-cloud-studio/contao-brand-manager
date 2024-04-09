@@ -132,13 +132,9 @@ $GLOBALS['TL_DCA']['tl_brand'] = array
 			(
 				array('Bcs\Backend\Brands', 'generateAlias')
 			),
-			'sql'                     => "varchar(128) COLLATE utf8_bin NOT NULL default ''"
-
+			'sql'                     => "varchar(255) BINARY NOT NULL default ''"
 		),
-        
 
-        
-        
         
 		'name' => array
 		(
